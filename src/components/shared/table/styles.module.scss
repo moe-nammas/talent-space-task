@@ -1,0 +1,69 @@
+@use 'src/styles/variables' as global;
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .table-wrapper {
+    border-collapse: collapse;
+
+    .table-header-row {
+      text-transform: uppercase;
+      text-align: left;
+      border-bottom: 2px solid #1e113d;
+      th {
+        padding-bottom: 1rem;
+      }
+    }
+
+    .table-data-row {
+      text-align: left;
+      border-bottom: 2px solid #1e113d;
+      td {
+        padding-block: 1rem;
+      }
+
+      &:hover {
+        background-color: #1e0647;
+      }
+
+      .action-btns-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .action-btn {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background-color: transparent;
+          border-radius: 4px;
+          padding: 7px 1rem;
+          border: 1px solid white;
+          color: white;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .success {
+          border: 1px solid global.$success-badge-bg-color;
+          color: global.$success-badge-text-color;
+        }
+
+        .danger {
+          border: 1px solid global.$danger-badge-bg-color;
+          color: global.$danger-badge-text-color;
+        }
+      }
+    }
+  }
+
+  .no-data-available {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+}

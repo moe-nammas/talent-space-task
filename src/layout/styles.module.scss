@@ -1,0 +1,7 @@
+@use 'src/styles/variables' as global;
+
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
